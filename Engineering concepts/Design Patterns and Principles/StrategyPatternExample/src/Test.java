@@ -4,13 +4,13 @@ public class Test {
         PaymentStrategy CreditCardPaymentStrategy = new CreditCardPayment();
         PaymentStrategy PayPalPaymentStrategy = new PayPalPayment();
 
-        // initilazing the client with strategy-credit card
-        PaymentContext paymentContext = new PaymentContext(CreditCardPaymentStrategy);
-        paymentContext.pay(100);
+        // initilazing the client with strategy credit card
+        PaymentContext paymentContext1 = new PaymentContext(CreditCardPaymentStrategy);
+        paymentContext1.pay(100);
 
-        //initilizing the client with strategy with paypal
-        paymentContext = new PaymentContext(PayPalPaymentStrategy);
-        paymentContext.pay(10);
+        //initilizing the client with strategy paypal
+        PaymentContext paymentContext2 = new PaymentContext(PayPalPaymentStrategy);
+        paymentContext2.pay(10);
 
     }
 }
