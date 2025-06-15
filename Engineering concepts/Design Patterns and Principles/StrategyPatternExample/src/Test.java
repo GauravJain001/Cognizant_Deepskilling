@@ -11,6 +11,6 @@ public class Test {
         //initilizing the client with strategy with paypal
         paymentContext = new PaymentContext(PayPalPaymentStrategy);
         paymentContext.pay(10);
-        
+
     }
 }
