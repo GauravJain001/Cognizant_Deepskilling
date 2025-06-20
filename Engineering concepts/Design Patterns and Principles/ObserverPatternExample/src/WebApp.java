@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class WebApp {
+public class WebApp implements Observer{
 }

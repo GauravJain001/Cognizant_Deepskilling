@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class MobileApp {
+public class MobileApp implements Observer{
 }
