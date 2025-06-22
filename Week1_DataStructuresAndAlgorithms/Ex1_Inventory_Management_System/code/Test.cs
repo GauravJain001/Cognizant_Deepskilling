@@ -7,7 +7,6 @@ namespace code
         {
             //instancing Inventory (singleton pattern)
             Inventory store = Inventory.getInstance();
-
             //Making Products List
             List<Product> products = [
             new Product(1, "Mouse", 50, 500),
@@ -31,22 +30,17 @@ namespace code
             new Product(19, "Speakers", 12, 3500),
             new Product(20, "Projector", 3, 45000)
             ];
-
             //Inserting Products in Store
             foreach (var p in products)
             {
                 store.add(p);
             }
-
             //testing get,update,delete methods
             store.delete(20);
             store.get(20);
             store.update(new Product(1, "Mouse", 60, 500));
             store.get(15);
             store.get(2);
-
-
-
             //Testing LinearSearch and BinarySearch Utility
             //all products whose quantity is greater then 50
             List<Product> res = SearchUtility.LinearSearch(store.GetAllProducts(), p => p.quantity >= 20);
