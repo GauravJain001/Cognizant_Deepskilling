@@ -16,6 +16,7 @@ namespace Code
             // calling Type method of Documents
             excelDocument.Type();
             pdfDocument.Type();
+            wordDocument.Type();
         }
     }
 }

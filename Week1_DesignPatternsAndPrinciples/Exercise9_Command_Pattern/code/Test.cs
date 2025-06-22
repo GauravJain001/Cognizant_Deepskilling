@@ -15,7 +15,6 @@ namespace code
             //Setting Command and Executing it
             Remote.SetCommand(Light_On_Command);
             Remote.ExecuteCommand();
-
             //Changing Command
             Remote.SetCommand(Light_Of_Command);
             Remote.ExecuteCommand();
