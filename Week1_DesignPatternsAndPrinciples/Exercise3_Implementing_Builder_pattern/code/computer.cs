@@ -1,39 +1,46 @@
 using System;
 namespace code
 {
-    class computer
+    class Computer
     {
-        private string ram;
-        private string cpu;
-        private string storage;
-        private computer() { }
-
-        static class Builder
+        private string ?Ram;
+        private string ?Cpu;
+        private string ?Storage;
+        private Computer(Builder builder)
         {
-            computer comp = new computer();
+            this.Ram = builder.Ram;
+            this.Cpu = builder.Cpu;
+            this.Storage = builder.Storage;
 
-            public Builder withRam(string ram)
-            {
-                comp.ram = ram;
-                return this;
-            }
-            public Builder withStorage(string storage)
-            {
-                comp.storage = storage;
-                return this;
-            }
-            public Builder withCpu(string cpu)
-            {
-                comp.cpu = cpu;
-                return this;
-            }
-            public computer build()
-            {
-                //validations
-                return comp;
-            }
         }
 
+        public class Builder
+        {
+            public String ?Cpu, Ram, Storage;
+            public Builder WithCpu(String Cpu)
+            {
+                this.Cpu = Cpu;
+                return this;
+            }
+            public Builder WithRam(String Ram)
+            {
+                this.Ram = Ram;
+                return this;
+            }
+            public Builder WithStorage(String Storage)
+            {
+                this.Storage = Storage;
+                return this;
+            }
+            public Computer Build()
+            {
+                return new Computer(this);
+            }
+        }
+        public override string ToString()
+        {
+            return $"Ram -{Ram}, Storage = {Storage}, CPU - {Cpu}";
+        }
         
     }
 }
