@@ -4,10 +4,12 @@ namespace code
     class StudentController
     {
         Student model;
+        StudentView view;
         //dependency Injection
-        public StudentController(Student student)
+        public StudentController(Student student, StudentView view)
         {
             this.model = student;
+            this.view = view;
         }
         public void updateName(string Name)
         {
@@ -34,6 +36,10 @@ namespace code
         public char getGrade()
         {
             return model.Grade;
+        }
+        public void DisplayStudentDetails()
+        {
+            view.DisplayStudentDetails(model);
         }
     }
 }

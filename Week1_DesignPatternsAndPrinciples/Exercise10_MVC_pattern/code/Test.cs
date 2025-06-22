@@ -12,11 +12,11 @@ namespace code
             //Creating the view
             StudentView view = new StudentView();
 
-            //Creating the controller and injecting the model
-            StudentController controller = new StudentController(student);
+            //Creating the controller and injecting the model and view
+            StudentController controller = new StudentController(student,view);
 
-            //Displaying initial student details using the view
-            view.DisplayStudentDetails(student);
+            //Displaying initial student details using the controller
+            controller.DisplayStudentDetails();
 
             //Updating model data via the controller
             controller.updateName("Ram");
@@ -24,7 +24,7 @@ namespace code
             controller.updateId(102);
 
             //Displaying updated student details
-            view.DisplayStudentDetails(student);
+            controller.DisplayStudentDetails();
         }
     }
 }
