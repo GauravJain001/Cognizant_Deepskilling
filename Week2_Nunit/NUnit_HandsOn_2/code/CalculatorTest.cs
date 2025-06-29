@@ -51,15 +51,15 @@ namespace code
             }
             
         }
-        [Test]
-        public void TestAddAndClear()
-        {
-            Calculator.Addition(5, 5);
-            Assert.That(10, Is.EqualTo(Calculator.GetResult));
-            Calculator.AllClear();
-            Assert.That(0, Is.EqualTo(Calculator.GetResult));
+            [Test]
+            public void TestAddAndClear()
+            {
+                Calculator.Addition(5, 5);
+                Assert.That(10, Is.EqualTo(Calculator.GetResult));
+                Calculator.AllClear();
+                Assert.That(0, Is.EqualTo(Calculator.GetResult));
 
-        }
+            }
 
 
 
