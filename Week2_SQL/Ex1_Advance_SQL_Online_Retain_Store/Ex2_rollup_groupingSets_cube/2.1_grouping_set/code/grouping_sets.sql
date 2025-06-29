@@ -4,6 +4,7 @@ JOIN Customers  c ON c.CustomerID = o.CustomerID
 JOIN Products p ON od.ProductID = p.ProductID
 JOIN Categories cat ON p.CategoryID = cat.CategoryID
 GROUP BY GROUPING SETS(
+(cat.CategoryName,c.Region),
 (c.Region),
 (cat.CategoryName)
 );
