@@ -11,4 +11,4 @@ RETURN
     WHERE DepartmentID = @DeptID
 );
 
-SELECT * FROM dbo.fn_GetEmployeesByDepartment(3); -- IT department
+SELECT * FROM dbo.fn_GetEmployeesByDepartment(3); 
