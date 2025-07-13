@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RetailInventory.Data;
 using RetailInventory.Models;
-
 var context = new AppDbContext();
-
 // Update the price of the "Laptop"
 var product = await context.Products.FirstOrDefaultAsync(p => p.Name == "Laptop");
 if (product != null)
@@ -16,7 +14,6 @@ if (product != null)
 else
 {
     Console.WriteLine("Laptop not found.");
-}
 
 //Delete the product "Rice Bag"
 var toDelete = await context.Products.FirstOrDefaultAsync(p => p.Name == "Rice Bag");
